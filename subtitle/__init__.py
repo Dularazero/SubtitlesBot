@@ -1,10 +1,10 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
-BASE_URL = "https://isubtitles.org"
+BASE_URL = "https://www.baiscopelk.com"
 
 def search_sub(query):
-    r = requests.get(f"{BASE_URL}/search?kwd={query}").text
+    r = requests.get(f"{BASE_URL}/?s={query}").text
     soup = bs(r, "lxml")
     list_search = soup.find_all("div", class_="row")
     index = []
